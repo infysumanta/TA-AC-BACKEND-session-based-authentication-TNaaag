@@ -1,0 +1,43 @@
+<%- include('content/header') -%>
+<div class="container center">
+  <div class="form form-control">
+    <h3>Register</h3>
+    <% if(exist) { %>
+    <p><%= exist %></p>
+    <% } %> <% if(min) { %>
+    <p><%= min %></p>
+    <% } %>
+    <form action="/users/register" method="POST">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Name"
+        autocomplete="off"
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        autocomplete="off"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter Password"
+      />
+
+      <input type="radio" name="admin" id="admin" value="true" />
+      <label for="admin">Admin</label>
+
+      <input type="radio" name="admin" id="admin" value="false" />
+      <label for="admin">User</label>
+      <div class="center">
+        <input type="submit" value="Register" />
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('content/footer') -%>

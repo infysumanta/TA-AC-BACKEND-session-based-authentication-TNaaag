@@ -1,0 +1,34 @@
+<%- include('content/header') -%>
+<div class="container center">
+  <div class="form form-control">
+    <h3>Login</h3>
+    <% if(regsuccess) { %>
+    <p><%= regsuccess %></p>
+    <% } %> <% if(ep) { %>
+    <p><%= ep %></p>
+    <% } %> <% if(email) { %>
+    <p><%= email %></p>
+    <% } %> <% if(password) { %>
+    <p><%= password %></p>
+    <% } %>
+    <form action="/users/login" method="POST">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        autocomplete="off"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter Password"
+      />
+      <div class="center">
+        <input type="submit" value="Login" />
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('content/footer') -%>

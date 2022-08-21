@@ -1,0 +1,23 @@
+<%- include('content/header') -%>
+<div class="container content">
+  <div class="flex-50">
+    <div class="product-info">
+      <h1 class="product-name">
+        Product Name :-<%= product.name %>
+        <span class="likes"
+          >Likes:- <%= product.likes %>
+          <a href="/ecommerce/<%= product.id %>/like"
+            ><i class="fa fa-thumbs-o-up"></i></a
+        ></span>
+      </h1>
+      <div class="product-quantity">Quantity:- <%= product.quantity %></div>
+      <div class="product flex">
+        <span class="price">Price:- <%= product.price %></span>
+        <a href="/ecommerce/<%= product.id %>/cart"
+          ><span class="cart">Add To Cart</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('content/footer') -%>

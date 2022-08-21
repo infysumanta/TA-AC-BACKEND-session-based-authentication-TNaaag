@@ -1,0 +1,25 @@
+<%- include('content/header') -%>
+<div class="container center">
+  <div class="form form-control">
+    <h3>Add Product</h3>
+    <form action="/ecommerce" method="POST">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Product Name"
+      />
+      <input
+        type="number"
+        name="quantity"
+        id="quantity"
+        placeholder="Enter Quantity"
+      />
+      <input type="number" name="price" id="price" placeholder="Enter Price" />
+      <div class="center">
+        <input type="submit" value="Add Product" />
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('content/footer') -%>
