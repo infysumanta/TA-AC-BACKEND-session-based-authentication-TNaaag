@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-Commerce App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <nav>
+          <div class="container flex">
+            <a href="/" class="logo">E-Commerce</a>  
+            <ul class="flex">
+              <li><a href="/">Home</a></li>
+             <% if(!locals.session.loggedIn) { %>
+                <li><a href="/users/register">Register</a></li>
+                <li><a href="/users/login">Login</a></li>
+             <% } else { %>
+              <li><a href="/ecommerce/new">Add New Product</a></li>
+                <li><a href="/users/logout">Logout</a></li>
+             <% } %>
+                                
+              </ul>
+          </div>
+      </nav>
