@@ -1,0 +1,17 @@
+<%- include('content/header') -%>
+<div class="container content">
+  <% products.forEach(product => { %>
+  <div class="flex-50">
+    <div class="product-info">
+      <h1 class="product-name">
+        Product Name :-<%= product.name %>
+        <span class="likes">Likes:- <%= product.likes %></span>
+      </h1>
+      <a href="/ecommerce/<%= product.id %>"
+        ><button class="btn-view">View Details</button></a
+      >
+    </div>
+  </div>
+  <% }) %>
+</div>
+<%- include('content/footer') -%>
