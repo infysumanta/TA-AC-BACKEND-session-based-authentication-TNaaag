@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+<main class="bg-white">
+  <!-- component -->
+  <div class="p-6">
+    <!-- header -->
+
+    <section
+      class="absolute top-1/2 left-1/2 mx-auto max-w-sm -translate-x-1/2 -translate-y-1/2 transform space-y-4 text-center w-full"
+    >
+      <!-- login content -->
+      <div class="space-y-4" method="post" action="/users/login">
+        <header class="mb-3 text-2xl font-bold">Loged in Successfully</header>
+      </div>
+    </section>
+  </div>
+</main>
+<%- include('partials/footer'); -%>
