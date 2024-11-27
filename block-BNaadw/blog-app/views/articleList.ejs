@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <nav class="bg-primary py-4 px-8 flex justify-between items-center">
+        <a href="/" class="text-white text-3xl font-bold">Home</a>
+        <div class="w-64 flex justify-between items-center">
+            <a href="/articles/new" class="bg-blue-900 p-2 rounded text-white font-bold hover:bg-blue-600 text-xl">Add Articles</a>
+            <a href="/users/logout" class="bg-blue-900 p-2 rounded text-white font-bold hover:bg-blue-600 text-xl">Logout</a>
+        </div>
+    </nav>
+    
+    <h1 class="text-center mt-6 text-4xl font-bold text-gray-600">Articles list</h1>
+    <section class="px-12 mt-8">
+        <% if(articles.length) { %>
+            <% articles.forEach(article => { %>
+                <div class="bg-red-200 my-6 px-8 py-6 rounded-lg">
+                    <h2 class="text-3xl text-blue-500 font-bold mb-3"><%= article.title %></h2>
+                    <p class="text-xl mb-8"><%= article.description.slice(0, 250) %></p>
+                    <a href="/articles/<%= article.slug %>" class="bg-green-500 hover:bg-green-400 text-white font-bold p-2">View More</a>
+                </div>
+                
+            <% }) %>
+        <% }  else { %>
+            <h1 class="text-3xl text-blue-600 font-bold">No Articles Present</h1>
+        <% } %>
+    
+
+</body>
+</html>
